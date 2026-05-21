@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    Proyecto de Investigación - UNAM
+  </title>
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      background:#f6f6f6;
+      color:#0a0a0a;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .page{
+      display:none;
+      min-height:100vh;
+      padding:80px 90px;
+      position:relative;
+    }
+
+    .page.active{
+      display:block;
+    }
+
+    .home-title{
+        font-size:34px;
+        line-height:1.2;
+        max-width:1000px;
+        margin-bottom:2px;
+        font-weight:700;
+    }
+
+    .home-subtitle{
+      font-size:30px;
+      line-height:1.2;
+      margin-top:0;
+      margin-bottom:70px;
+      font-weight:700;
+    }
+
+    h1{
+      font-size:30px;
+      margin-bottom:40px;
+      line-height:1.2;
+    }
+
+    h2{
+      font-size:22px;
+      margin-top:40px;
+      margin-bottom:12px;
+      line-height:1.3;
+    }
+
+    h3{
+      font-size:19px;
+      margin-top:30px;
+      margin-bottom:10px;
+      line-height:1.3;
+    }
+
+    p,
+    li{
+      font-size:18px;
+      line-height:1.6;
+      max-width:1000px;
+    }
+
+    ul,
+    ol{
+      max-width:1000px;
+      padding-left:28px;
+    }
+
+    .menu-item{
+        font-size:24px;
+        font-weight:400;
+        margin:30px 0;
+        cursor:pointer;
+        width:fit-content;
+        transition:.2s ease;
+    }
+
+    .menu-item:hover{
+        text-decoration:underline;
+    }
+
+    .back{
+      position:absolute;
+      top:26px;
+      left:34px;
+      font-size:42px;
+      cursor:pointer;
+      line-height:1;
+      user-select:none;
+    }
+
+    .content{
+      margin-top:30px;
+    }
+
+    .case{
+      margin-bottom:30px;
+    }
+
+    .case strong{
+      display:block;
+      font-size:19px;
+      margin-bottom:8px;
+    }
+
+    .index-block p{
+      margin:6px 0;
+      line-height:1.4;
+      font-size:18px;
+    }
+
+    .index-title{
+      margin-top:22px;
+      margin-left:0;
+      font-weight:700;
+    }
+
+    .indent{
+      margin-left:32px;
+    }
+
+    .indent-2{
+      margin-left:64px;
+    }
+
+    .indent-3{
+      margin-left:96px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HOME -->
+
+  <section id="home" class="page active">
+
+    <h1 class="home-title">
+      Modelo estructural para el diseño de sistemas generativos:
+    </h1>
+
+    <h2 class="home-subtitle">
+      el algoritmo como lenguaje compositivo
+    </h2>
+
+    <div class="menu-item" onclick="goTo('indice')">
+      1. Índice
+    </div>
+
+    <div class="menu-item" onclick="goTo('problema')">
+      2. Planteamiento del problema
+    </div>
+
+    <div class="menu-item" onclick="goTo('pregunta')">
+      3. Pregunta de investigación
+    </div>
+
+    <div class="menu-item" onclick="goTo('supuesto')">
+      4. Supuesto hipotético
+    </div>
+
+    <div class="menu-item" onclick="goTo('objetivos')">
+      5. Objetivos
+    </div>
+
+    <div class="menu-item" onclick="goTo('antecedentes')">
+      6. Antecedentes y contexto actual
+    </div>
+
+    <div class="menu-item" onclick="goTo('conceptual')">
+      7. Enfoque conceptual
+    </div>
+
+    <div class="menu-item" onclick="goTo('metodologia')">
+      8. Metodología
+    </div>
+
+    <div class="menu-item" onclick="goTo('aportes')">
+      9. Aportes
+    </div>
+
+    <div class="menu-item" onclick="goTo('bibliografia')">
+      10. Bibliografía
+    </div>
+
+  </section>
+
+  <!-- ÍNDICE -->
+
+  <section id="indice" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content index-block">
+
+      <h1>1. Índice</h1>
+
+      <p class="index-title">INTRODUCCIÓN</p>
+
+      <p class="index-title">
+        I. DISEÑO COMO SISTEMA
+      </p>
+
+      <p class="indent">I.1 Definición de diseño</p>
+      <p class="indent">I.2 Forma y estructura</p>
+      <p class="indent">I.3 Teoría general de sistemas</p>
+      <p class="indent">I.4 Del objeto al sistema</p>
+      <p class="indent">I.5 Diseño generativo</p>
+
+      <p class="index-title">
+        II. ALGORITMO COMO LENGUAJE
+      </p>
+
+      <p class="indent">II.1 Definición y lógica algorítmica</p>
+      <p class="indent">II.2 Lenguaje compositivo en arte, arquitectura y música</p>
+      <p class="indent">II.3 Código como lenguaje</p>
+      <p class="indent">II.4 Composición y comportamiento</p>
+
+      <p class="index-title">
+        III. ESTRUCTURAS ALGORÍTMICAS Y RELACIONES HUMANO-MÁQUINA
+      </p>
+
+      <p class="indent">
+        III.1 Genealogía algorítmica
+      </p>
+
+      <p class="indent-2">
+        III.1.1 Sistemas formales y matemáticos
+      </p>
+
+      <p class="indent-2">
+        III.1.2 Sistemas probabilísticos
+      </p>
+
+      <p class="indent-2">
+        III.1.3 Sistemas interactivos y en tiempo real
+      </p>
+
+      <p class="indent-2">
+        III.1.4 Sistemas contemporáneos basados en datos
+      </p>
+
+      <p class="indent">
+        III.2 Tipologías algorítmicas
+      </p>
+
+      <p class="indent-2">
+        III.2.1 Deterministas
+      </p>
+
+      <p class="indent-2">
+        III.2.2 Estocásticos
+      </p>
+
+      <p class="indent-2">
+        III.2.3 Probabilísticos
+      </p>
+
+      <p class="indent-2">
+        III.2.4 Evolutivos
+      </p>
+
+      <p class="indent-2">
+        III.2.5 Reactivos
+      </p>
+
+      <p class="indent">
+        III.3 Coproducción humano-máquina
+      </p>
+
+      <p class="indent-2">
+        III.3.1 Breve historia
+      </p>
+
+      <p class="indent-2">
+        III.3.2 De la tecnología como herramienta técnica al lenguaje compositivo
+      </p>
+
+      <p class="indent">
+        III.4 Casos de estudio
+      </p>
+
+      <p class="indent-2">
+        III.4.1 John Cage — Music of Changes
+      </p>
+
+      <p class="indent-2">
+        III.4.2 Iannis Xenakis — Metastasis
+      </p>
+
+      <p class="indent-2">
+        III.4.3 Frieder Nake — Hommage à Paul Klee
+      </p>
+
+      <p class="indent-2">
+        III.4.4 Vera Molnár — Transformations
+      </p>
+
+      <p class="indent-2">
+        III.4.5 Ryoji Ikeda — data.tron
+      </p>
+
+      <p class="indent-2">
+        III.4.6 Rafael Lozano-Hemmer — Pulse Room
+      </p>
+
+      <p class="index-title">
+        IV. CONTEXTO Y PROBLEMÁTICA DIGITAL CONTEMPORÁNEA
+      </p>
+
+      <p class="indent">
+        IV.1 Interfaces e interacción
+      </p>
+
+      <p class="indent">
+        IV.2 Infocracia y digitalización
+      </p>
+
+      <p class="indent">
+        IV.3 Arquitecturas algorítmicas centralizadas
+      </p>
+
+      <p class="indent">
+        IV.4 Agencia y automatización
+      </p>
+
+      <p class="index-title">
+        V. DESARROLLO EXPERIMENTAL DEL MODELO
+      </p>
+
+      <p class="indent">
+        V.1 Modelo estructural del sistema
+      </p>
+
+      <p class="indent-2">
+        V.1.1 Definición, metodología y criterios de diseño
+      </p>
+
+      <p class="indent-2">
+        V.1.2 Componentes estructurales
+      </p>
+
+      <p class="indent-2">
+        V.1.3 Variables, parámetros y fronteras
+      </p>
+
+      <p class="indent-2">
+        V.1.4 Lógica de funcionamiento
+      </p>
+
+      <p class="indent">
+        V.2 Desarrollo Sistema cerrado
+      </p>
+
+      <p class="indent">
+        V.3 Desarrollo Sistema abierto
+      </p>
+
+      <p class="indent">
+        V.4 Documentación del proceso
+      </p>
+
+      <p class="index-title">
+        VI. ANÁLISIS Y EVALUACIÓN DEL MODELO
+      </p>
+
+      <p class="indent">
+        VI.1 Forma y comportamiento emergente
+      </p>
+
+      <p class="indent">
+        VI.2 Comparación entre sistemas
+      </p>
+
+      <p class="indent">
+        VI.3 Interpretación de resultados
+      </p>
+
+      <p class="indent">
+        VI.4 Aplicaciones, alcances y limitaciones del modelo
+      </p>
+
+      <p class="index-title">
+        CONCLUSIONES
+      </p>
+
+      <p class="index-title">
+        BIBLIOGRAFÍA
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PLANTEAMIENTO -->
+
+  <section id="problema" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>2. Planteamiento del problema</h1>
+
+      <p>
+        En el mundo digital contemporáneo, los algoritmos operan como arquitecturas invisibles que 
+        moldean la percepción y el comportamiento colectivo. A través de plataformas tecnodigitales 
+        determinan qué vemos, consumimos y valoramos, condicionando en casos extremos nuestra percepción de la realidad.
+      </p>
+
+      <p>
+        En paralelo, en el campo del diseño y la programación, el algoritmo suele ser entendido como 
+        una herramienta de automatización, y no como un lenguaje capaz de desarrollar procesos creativos. 
+        Esta perspectiva limita la intervención del diseñador y facilita la delegación parcial o total del 
+        proceso a sistemas automatizados, frecuentemente sin un razonamiento crítico.
+      </p>
+
+      <p>
+        Frente a este contexto, se propone replantear el papel del algoritmo desde el diseño: 
+        no como una caja negra ni como sustituto del autor, sino como una estructura de variables, límites y parámetros, 
+        definida críticamente por el diseñador.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PREGUNTA -->
+
+  <section id="pregunta" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>3. Pregunta de investigación</h1>
+
+      <p>
+        ¿Cómo puede el algoritmo concebirse como lenguaje estructural y compositivo, que permita al diseñador ejercer agencia creativa dentro de sistemas generativos?
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SUPUESTO -->
+
+  <section id="supuesto" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>4. Supuesto hipotético</h1>
+
+      <p>
+        Si el algoritmo se concibe como lenguaje estructural y compositivo, y no como herramienta de automatización, es posible desarrollar sistemas generativos en los que el diseñador ejerza agencia creativa mediante la definición de límites, parámetros y variables, articulando formas y comportamientos emergentes a través de lógicas compositivas.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- OBJETIVOS -->
+
+  <section id="objetivos" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>5. Objetivos</h1>
+
+      <h2>Objetivo general</h2>
+
+      <p>
+        Desarrollar un modelo estructural que formalice el algoritmo como lenguaje compositivo para el diseño de sistemas generativos, ejerciendo agencia creativa mediante la definición de estructuras, parámetros y condiciones de variación.
+      </p>
+
+      <h2>Objetivos particulares</h2>
+
+      <ol>
+        <li>
+          Analizar estructuras algorítmicas y sistemas generativos dentro del arte, diseño y programación en el siglo XX y XXI.
+        </li>
+
+        <li>
+          Definir principios estructurales y compositivos aplicables al diseño de sistemas generativos.
+        </li>
+
+        <li>
+          Desarrollar experimentalmente dos sistemas generativos, uno cerrado compuesto exclusivamente con reglas internas, y una versión abierta que responda a estímulos externos como datos o sensores.
+        </li>
+
+        <li>
+          Evaluar los resultados de ambos sistemas.
+        </li>
+
+        <li>
+          Sistematizar el proceso como modelo estructural para el diseño de sistemas generativos.
+        </li>
+      </ol>
+
+    </div>
+
+  </section>
+
+  <!-- ANTECEDENTES -->
+
+<section id="antecedentes" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+  
+    <div class="content">
+  
+      <h1>6. Antecedentes y contexto actual</h1>
+  
+      <h2>
+        1. Trayectoria de estructuras algorítmicas
+      </h2>
+  
+      <p>
+        Los algoritmos han pasado de sistemas formales y deterministas hacia sistemas dinámicos e interactivos. Esta transformación desplazó el algoritmo de una función exclusivamente matemática, hacia estructuras capaces de organizar comportamiento y procesos generativos.
+      </p>
+  
+      <h2>
+        2. Coproducción humano-máquina
+      </h2>
+  
+      <p>
+        Diversos artistas, diseñadores y compositores han trabajado con sistemas, donde el algoritmo opera como lenguaje y no únicamente como herramienta técnica.
+      </p>
+  
+      <h3>
+        Casos de estudio
+      </h3>
+  
+      <div class="case">
+  
+        <strong>
+          John Cage — Music of Changes (1951)
+        </strong>
+  
+        <p>
+          Uso combinatorio del I Ching para organizar sonidos, duraciones y dinámicas mediante operaciones aleatorias controladas.
+        </p>
+  
+      </div>
+  
+      <div class="case">
+  
+        <strong>
+          Iannis Xenakis — Metastasis (1954)
+        </strong>
+  
+        <p>
+          Aplicación de modelos estocásticos y probabilísticos para generar estructuras sonoras complejas y comportamientos emergentes.
+        </p>
+  
+      </div>
+  
+      <div class="case">
+  
+        <strong>
+          Frieder Nake — Hommage à Paul Klee (1965)
+        </strong>
+  
+        <p>
+          Uso de reglas matemáticas y permutaciones algorítmicas para producir composiciones visuales generativas en plotter.
+        </p>
+  
+      </div>
+  
+      <div class="case">
+  
+        <strong>
+          Vera Molnár — Transformations (1976)
+        </strong>
+  
+        <p>
+          Exploración de variación, error y perturbación probabilística dentro de estructuras geométricas sistemáticas, creando variaciones únicas en plotters que exploran orden vs caos visual.
+        </p>
+  
+      </div>
+  
+      <h2>
+        3. Contexto contemporáneo
+      </h2>
+  
+      <p>
+        En el entorno tecnodigital contemporáneo, interfaces y sistemas algorítmicos median gran parte de la experiencia cotidiana mediante arquitecturas centralizadas y procesos automatizados, generando una pérdida progresiva de agencia autoral dentro de la producción digital.
+      </p>
+  
+      <h3>
+        Casos de estudio contemporáneos
+      </h3>
+  
+      <div class="case">
+  
+        <strong>
+          Ryoji Ikeda — data.tron. (2007)
+        </strong>
+  
+        <p>
+          Transformación de grandes volúmenes de datos en experiencias visuales y sonoras estructuradas mediante sistemas algorítmicos.
+        </p>
+  
+      </div>
+  
+      <div class="case">
+  
+        <strong>
+          Rafael Lozano-Hemmer — Pulse Room (2006)
+        </strong>
+  
+        <p>
+          Sistema reactivo en tiempo real que traduce información biológica humana en comportamiento lumínico e interacción espacial.
+        </p>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+
+
+  <!-- ENFOQUE -->
+
+  <section id="conceptual" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>7. Enfoque conceptual</h1>
+
+      <h2>1. Diseño como sistema estructural</h2>
+
+      <p>
+        El diseño entendido como campo de posibilidades, más allá del objeto terminado.
+      </p>
+
+      <h2>2. Algoritmo como lenguaje compositivo</h2>
+
+      <p>
+        El algoritmo opera como una lógica organizadora de formas y comportamientos dentro de sistemas generativos.
+      </p>
+
+      <h2>3. Coproducción humano-máquina</h2>
+
+      <p>
+        El diseñador define las condiciones estructurales y los criterios compositivos; el sistema genera variaciones dentro de ese campo.
+      </p>
+
+      <h2>4. Diseño crítico y agencia autoral</h2>
+
+      <p>
+        El diseño de sistemas generativos propios constituye una práctica de recuperación de agencia creativa. El diseñador no delega la lógica del sistema: la define.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- METODOLOGÍA -->
+
+  <section id="metodologia" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>8. Metodología</h1>
+
+      <h2>
+        Fase 1 — Investigación contextual y conceptual
+      </h2>
+
+      <p>
+        Investigación documental y análisis teórico. Se revisan fuentes primarias y secundarias sobre diseño como sistema, composición, lenguaje algorítmico, sistemas generativos y relaciones de coproducción humano-máquina dentro del diseño, arte y programación moderna y contemporánea.
+      </p>
+
+      <h2>
+        Fase 2 — Análisis del contexto contemporáneo
+      </h2>
+
+      <p>
+        Esta fase es un puente crítico entre el fundamento teórico/histórico con la necesidad del desarrollo experimental.
+      </p>
+
+      <h2>
+        Fase 3 — Desarrollo experimental del sistema
+      </h2>
+
+      <p>
+        Diseño e implementación de dos sistemas generativos (abierto y cerrado).
+      </p>
+
+      <h2>
+        Fase 4 — Análisis y evaluación
+      </h2>
+
+      <p>
+        Evaluación comparativa de los dos sistemas en términos de lógica interna, estabilidad estructural, variabilidad y comportamiento emergente.
+      </p>
+
+      <h2>
+        Fase 5 — Sistematización metodológica
+      </h2>
+
+      <p>
+        Síntesis del proceso como modelo replicable de diseño de sistemas generativos basados en estructuras algorítmicas.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- APORTES -->
+
+  <section id="aportes" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>9. Aportes</h1>
+
+      <h2>
+        Disciplinar / Metodológico
+      </h2>
+
+      <p>
+        Formalización del algoritmo como lenguaje compositivo mediante un modelo estructural replicable para el diseño de sistemas generativos.
+      </p>
+
+      <h2>
+        Profesional
+      </h2>
+
+      <p>
+        Propuesta de una metodología aplicable al diseño contemporáneo para desarrollar sistemas generativos con intención y control estructural.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- BIBLIOGRAFÍA -->
+
+  <section id="bibliografia" class="page">
+
+    <div class="back" onclick="goHome()">←</div>
+
+    <div class="content">
+
+      <h1>10. Bibliografía</h1>
+
+      <p>
+        Contenido pendiente...
+      </p>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    function goTo(pageId){
+
+      document.querySelectorAll('.page').forEach(page=>{
+        page.classList.remove('active');
+      });
+
+      document.getElementById(pageId).classList.add('active');
+
+      window.scrollTo(0,0);
+    }
+
+    function goHome(){
+      goTo('home');
+    }
+
+  </script>
+
+</body>
+</html>
