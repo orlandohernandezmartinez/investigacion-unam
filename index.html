@@ -10,139 +10,267 @@
 
   <style>
 
-    *{
-      box-sizing:border-box;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    body{
-      margin:0;
-      background:#f6f6f6;
-      color:#0a0a0a;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+body{
+  margin:0;
+  background:#f6f6f6;
+  color:#0a0a0a;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-    .page{
-      display:none;
-      min-height:100vh;
-      padding:80px 90px;
-      position:relative;
-    }
+/* PÁGINAS */
 
-    .page.active{
-      display:block;
-    }
+.page{
+  display:none;
+  min-height:100vh;
+  padding:80px 90px;
+  position:relative;
+}
 
-    .home-title{
-        font-size:34px;
-        line-height:1.2;
-        max-width:1000px;
-        margin-bottom:2px;
-        font-weight:700;
-    }
+.page.active{
+  display:block;
+}
 
-    .home-subtitle{
-      font-size:30px;
-      line-height:1.2;
-      margin-top:0;
-      margin-bottom:70px;
-      font-weight:700;
-    }
+/* HOME */
 
-    h1{
-      font-size:30px;
-      margin-bottom:40px;
-      line-height:1.2;
-    }
+.home-title{
+  font-size:34px;
+  line-height:1.2;
+  max-width:1000px;
+  margin-bottom:2px;
+  font-weight:700;
+}
 
-    h2{
-      font-size:22px;
-      margin-top:40px;
-      margin-bottom:12px;
-      line-height:1.3;
-    }
+.home-subtitle{
+  font-size:30px;
+  line-height:1.2;
+  margin-top:0;
+  margin-bottom:70px;
+  font-weight:700;
+}
 
-    h3{
-      font-size:19px;
-      margin-top:30px;
-      margin-bottom:10px;
-      line-height:1.3;
-    }
+/* TITULOS */
 
-    p,
-    li{
-      font-size:18px;
-      line-height:1.6;
-      max-width:1000px;
-    }
+h1{
+  font-size:30px;
+  margin-bottom:40px;
+  line-height:1.2;
+}
 
-    ul,
-    ol{
-      max-width:1000px;
-      padding-left:28px;
-    }
+h2{
+  font-size:22px;
+  margin-top:40px;
+  margin-bottom:12px;
+  line-height:1.3;
+}
 
-    .menu-item{
-        font-size:24px;
-        font-weight:400;
-        margin:30px 0;
-        cursor:pointer;
-        width:fit-content;
-        transition:.2s ease;
-    }
+h3{
+  font-size:19px;
+  margin-top:30px;
+  margin-bottom:10px;
+  line-height:1.3;
+}
 
-    .menu-item:hover{
-        text-decoration:underline;
-    }
+/* TEXTO */
 
-    .back{
-      position:absolute;
-      top:26px;
-      left:34px;
-      font-size:42px;
-      cursor:pointer;
-      line-height:1;
-      user-select:none;
-    }
+p,
+li{
+  font-size:18px;
+  line-height:1.6;
+  max-width:1000px;
+}
 
-    .content{
-      margin-top:30px;
-    }
+ul,
+ol{
+  max-width:1000px;
+  padding-left:28px;
+}
 
-    .case{
-      margin-bottom:30px;
-    }
+/* MENÚ */
 
-    .case strong{
-      display:block;
-      font-size:19px;
-      margin-bottom:8px;
-    }
+.menu-item{
+  font-size:24px;
+  font-weight:400;
+  margin:30px 0;
+  cursor:pointer;
+  width:fit-content;
+  transition:.2s ease;
+}
 
-    .index-block p{
-      margin:6px 0;
-      line-height:1.4;
-      font-size:18px;
-    }
+.menu-item:hover{
+  text-decoration:underline;
+}
 
-    .index-title{
-      margin-top:22px;
-      margin-left:0;
-      font-weight:700;
-    }
+/* BOTÓN REGRESAR */
 
-    .indent{
-      margin-left:32px;
-    }
+.back{
+  position:absolute;
+  top:26px;
+  left:34px;
+  font-size:42px;
+  cursor:pointer;
+  line-height:1;
+  user-select:none;
+}
 
-    .indent-2{
-      margin-left:64px;
-    }
+/* CONTENIDO */
 
-    .indent-3{
-      margin-left:96px;
-    }
+.content{
+  margin-top:30px;
+}
 
-  </style>
+.case{
+  margin-bottom:30px;
+}
+
+.case strong{
+  display:block;
+  font-size:19px;
+  margin-bottom:8px;
+}
+
+/* ÍNDICE */
+
+.index-block p{
+  margin:6px 0;
+  line-height:1.4;
+  font-size:18px;
+}
+
+.index-title{
+  margin-top:22px;
+  margin-left:0;
+  font-weight:700;
+}
+
+.indent{
+  margin-left:32px;
+}
+
+.indent-2{
+  margin-left:64px;
+}
+
+.indent-3{
+  margin-left:96px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+  .page{
+    padding:
+      110px   /* top */
+      28px    /* right */
+      80px    /* bottom */
+      28px;   /* left */
+  }
+
+  .back{
+    top:56px;
+    left:28px;
+    font-size:42px;
+  }
+
+  /* HOME */
+
+  .home-title{
+    font-size:36px;
+    line-height:1.12;
+    max-width:100%;
+    margin-bottom:4px;
+  }
+
+  .home-subtitle{
+    font-size:28px;
+    line-height:1.15;
+    margin-top:0;
+    margin-bottom:70px;
+  }
+
+  /* TITULOS */
+
+  h1{
+    font-size:34px;
+    line-height:1.15;
+    margin-bottom:50px;
+  }
+
+  h2{
+    font-size:24px;
+    line-height:1.25;
+  }
+
+  h3{
+    font-size:22px;
+  }
+
+  /* TEXTO */
+
+  p,
+  li{
+    font-size:22px;
+    line-height:1.4;
+    max-width:100%;
+  }
+
+  .index-block p{
+    font-size:22px;
+    line-height:1.35;
+  }
+
+  ul,
+  ol{
+    padding-left:24px;
+    max-width:100%;
+  }
+
+  /* MENÚ HOME */
+
+  .menu-item{
+    font-size:28px;
+    line-height:1.2;
+    margin:34px 0;
+    width:100%;
+  }
+
+  /* CONTENIDO */
+
+  .content{
+    margin-top:0;
+  }
+
+  .case{
+    margin-bottom:34px;
+  }
+
+  .case strong{
+    font-size:22px;
+  }
+
+  /* SANGRÍAS ÍNDICE */
+
+  .indent{
+    margin-left:18px;
+  }
+
+  .indent-2{
+    margin-left:36px;
+  }
+
+  .indent-3{
+    margin-left:54px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
