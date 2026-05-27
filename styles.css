@@ -153,12 +153,18 @@ ol {
 }
 
 /* TOOTIP */
+[data-tooltip] {
+  position: relative;
+  cursor: default;
+  width: fit-content;
+}
+
 [data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
   left: calc(100% + 10px);
   top: 50%;
-  trasnsform: translateY(-50%);
+  transform: translateY(-50%);
   background: #0a0a0a;
   color: #f6f6f6;
   font-size: 14px;
