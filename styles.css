@@ -194,11 +194,6 @@ ol {
   margin-left: 96px;
 }
 
-[data-tooltip] {
-  position: relative;
-  cursor: default;
-}
-
 /* TOOTIP */
 [data-tooltip] {
   position: relative;
