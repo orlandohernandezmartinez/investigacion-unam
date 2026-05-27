@@ -22,6 +22,15 @@ body {
   display: block;
 }
 
+.page-header {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #DADADA;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
 /* HOME */
 
 .home-title {
