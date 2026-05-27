@@ -234,20 +234,11 @@ ol {
 /* ========================= */
 
 @media (max-width: 768px) {
-
-  /* Variable de alineación: todo se alinea con este valor */
   :root {
     --side: 36px;
   }
-
   .page {
     padding: 100px var(--side) 80px var(--side);
-  }
-
-  .back {
-    top: 44px;
-    left: var(--side);
-    font-size: 36px;
   }
 
   /* HOME */
