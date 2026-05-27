@@ -342,4 +342,18 @@ ol {
     margin-left: 60px;
   }
 
+  .page-nav {
+  justify-content: flex-start;
+  padding: 0 var(--side);
+  }
+
+  .page-top {
+  flex-direction: column;
+  gap: 24px;
+  }
+
+  .page-top .back {
+  font-size: 36px;
+  }
+
 }
