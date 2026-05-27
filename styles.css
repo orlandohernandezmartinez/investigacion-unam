@@ -156,8 +156,9 @@ ol {
 [data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
-  left: 0;
-  top: calc(100% + 6px);
+  left: calc(100% + 10px);
+  top: 50%;
+  trasnsform: translateY(-50%)
   background: #0a0a0a;
   color: #f6f6f6;
   font-size: 14px;
