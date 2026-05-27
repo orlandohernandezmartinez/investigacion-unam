@@ -8,6 +8,10 @@
 </head>
 
 <body>
+  <div class="page-nav" id="pageNav">
+    <span class="back" onclick="goHome()">←</span>
+    <span class="nav-title" id="navTitle"></span>
+  </div>
 
   <!-- HOME -->
   <section id="home" class="page active">
@@ -373,18 +377,46 @@
    </section>
 
   <script>
+    let headerObserver = null;
+
     function goTo(pageId) {
       document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
       });
       document.getElementById(pageId).classList.add('active');
       window.scrollTo(0, 0);
+
+      document.getElementById('pageNav').classList.remove('visible');
+
+      if (headerObserver) headerObserver.disconnect();
+
+      const activePage = document.getElementById(pageId);
+      const header = activePage.querySelector('.page-header');
+
+      if (header) {
+        document.getElementById('navTitle').textContent = header.textContent;
+
+        headerObserver = new IntersectionObserver(([entry]) => {
+          const nav = document.getElementById('pageNav');
+          if (!entry.isIntersecting) {
+            nav.classList.add('visible');
+          } else {
+            nav.classList.remove('visible');
+          }
+        }, { threshold: 0 });
+
+        headerObserver.observe(header);
+      }
     }
 
     function goHome() {
       goTo('home');
+      document.getElementById('pageNav').classList.remove('visible');
+      if (headerObserver) headerObserver.disconnect();
     }
   </script>
+</body>
+</html>
 
 </body>
 </html>
